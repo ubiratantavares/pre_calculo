@@ -4,9 +4,11 @@
 
 Caio é um fazendeiro. Todo ano ele planta sementes que virarão milho. 
 
-A função abaixo nos dá a quantidade de milho, $C$, em quilogramas (kg), que ele espera produzir se ele plantar milho em certa quantidade $a$ de acres de terra.
+A função abaixo nos dá a quantidade de milho, **C**, em quilogramas (kg), que ele espera produzir se ele plantar milho em certa quantidade **a** de acres de terra.
 
-$C(a)$ = $7500a - 1500$
+$$
+C(a) = 7500a - 1500
+$$
 
 Por exemplo, se Caio planta sementes de milho em dois acres de terra, ele espera produzir 
 

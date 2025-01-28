@@ -38,11 +38,11 @@ Observe que Caio tem que usar duas funções separadas para converter acres pl
 
 A primeira função, **C**, transforma acres em milho, enquanto a segunda função, **M**, transforma milho em dinheiro.
 
-[Figura 1](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura01.png)
+![Figura 1](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura01.png)
 
 Não seria ótimo se Caio pudesse escrever uma função que transformasse diretamente acres plantados em ganhos esperados?
 
-[Figura 2](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura02.png)
+![Figura 2](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura02.png)
 
 * **Como criar uma nova função**
 
@@ -56,7 +56,7 @@ Se Caio planta milho em **a** acres, ele espera produzir **C(a)** quilograma
 
 E, se ele produz **C(a)** quilogramas de milho, ele espera ganhar **M(C(a))** reais.
 
-[Figura 3](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura03.png)
+![Figura 3](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura03.png)
 
 Então, para encontrar uma regra geral que converta **a** acres diretamente em ganhos esperados, podemos encontrar a expressão **M(C(a))**.
 
@@ -92,7 +92,7 @@ Fizemos isso substituindo **C(a)** na função **M**, ou encontrando **M(C(a
 Vamos chamar essa nova função:
 
 $$
-M\circ C)(a)=M(C(a))
+(M\circ C)(a)=M(C(a))
 $$
 
 Que é lida como "M composta com C".
@@ -103,17 +103,13 @@ Isto é, na verdade, a definição formal de composição de função.
 
 Temos aqui uma ajuda visual para interpretar a definição acima.
 
-[Figura 4](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura04.png)
+![Figura 4](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura04.png)
 
 Ao utilizarmos ambas as funções **C** e **M**, a função **C**, a função do milho que converte dois em 13.500. 
 
 Então, a função **M**, a função dos ganhos que converte os 13.500 em 12.100 reais.
 
-Ao utilizarmos a função composta, vemos que a função 
-
-$$
-M \circ C
-$$
+Ao utilizarmos a função composta, vemos que a função MoC.
  
 Converte dois diretamente em 12.100 reais.
 

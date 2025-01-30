@@ -60,7 +60,6 @@ print(C(a))
 
 ```
 
-
 **Resposta: 13.500 kg de milho.**
 
 O que Caio quer realmente saber é o quanto de dinheiro ele conseguirá vendendo este milho. 
@@ -76,6 +75,37 @@ Então, se Caio produzir 13.500 kg de milho, ele pode estimar que vai ganhar:
 $$
 M(13.500) = 0,9 \times 13.500 - 50 = 12.100
 $$
+
+Definindo a função M e avaliando em c = 13.500 na linguagem Python:
+
+```Python
+from sympy import symbols, Function
+
+# define uma classe para a função C(a)
+class C(Function):
+    @classmethod
+    def eval(cls, a):
+        return 7500 * a - 1500
+
+# define uma classe para a função M(c)
+class M(Function):
+    @classmethod
+    def eval(cls, c):
+        return 0.9 * c - 50
+
+# define a variável simbólica
+a = symbols('a')
+c = symbols('c')
+
+# avalia a função C em a = 2
+C_value = C(2)
+
+# avalia a função M em c = C_Value
+M_value = M(C_value)
+
+# exibe o valor da função M avaliado em c = C_value
+print(f'{M_value:.2f}')
+```
 
 **Resposta: 12.100 kg de milho.**
 

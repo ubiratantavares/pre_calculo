@@ -10,11 +10,56 @@ $$
 C(a) = 7500a - 1500
 $$
 
+Definindo a função em Python:
+
+* **script01.py**
+
+```Python
+from sympy import symbols, Function
+
+# define uma classe para a função C(a)
+class C(Function):
+    @classmethod
+    def eval(cls, a):
+        return 7500 * a - 1500
+
+# define a variável simbólica
+a = symbols('a')
+
+# exibe a função
+print(C(a))
+```
+
 Por exemplo, se Caio planta sementes de milho em dois acres de terra, ele espera produzir 
 
 $$
 C(2) = 7.500(2) - 1.500 = 15.000 - 1.500 = 13.500
-$$ 
+$$
+
+Avaliando a função no valor de $a = 2$.
+
+* **script02.py**
+
+```Python
+from sympy import symbols, Function
+
+# define uma classe para a função C(a)
+class C(Function):
+    @classmethod
+    def eval(cls, a):
+        return 7500 * a - 1500
+
+# define a variável simbólica
+a = symbols('a')
+
+# avalia a função em a = 2
+c = C(2)
+
+# exibe o valor da função avaliado em a = 2
+print(C(a))
+
+```
+
 
 **Resposta: 13.500 kg de milho.**
 

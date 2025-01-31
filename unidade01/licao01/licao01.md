@@ -311,6 +311,113 @@ Dadas duas funções, podemos combiná-las de maneira que as saídas de uma fun�
 
 Vamos ver o que isso significa!
 
+* **Calculando funções compostas**
+
+* **Exemplo**
+
+Se $f(x) = 3x - 1$ e $g(x) = x^{3} + 2$, então quanto é f(g(3))?
+
+* **Solução**
+
+Uma forma de calcular f(g(3)) é fazer os cálculos de "dentro para fora". Em outras palavras, vamos calcular g(3) primeiro e então substituir esse resultado em f para encontrar nossa resposta.
+
+Vamos calcular g(3):
+
+$$
+g(3) = 3^{3} + 2 = 27 + 2 = 29
+$$
+
+Como $g(3) = 29$, então $f(g(3)) = f(29)$.
+
+Agora, vamos calcular f(29):
+
+$$
+f(29) = 3\times29- 1 = 87 - 1 = 86
+$$
+
+* **Encontrando a função composta**
+
+No exemplo acima, a função g levou de 3 para 29, e então a função f levou de 29 para 86. Vamos encontrar a função que leva 3 diretamente em 86.
+
+Para isso, precisamos compor as duas funções e encontrar f(g(x)).
+
+* **Exemplo**
+
+Quanto é f(g(x))?
+
+* **Solução**
+
+Se analisarmos a expressão f(g(x)), veremos que g(x) é a entrada da função f. Então, vamos substituir g(x) sempre que virmos x na função f.
+
+$$
+f(g(x)) = 3g(x) - 1 = 3(x^{3} + 2) - 1 = 3x^{3} + 6 - 1 = 3x^{3} + 5
+$$
+
+Essa nova função deve levar 3 diretamente para 86. Vamos verificar!
+
+$$
+	f(g(3)) = 3 \times 3^{3} + 5 = 81 + 5 = 86
+$$
+
+* **Vamos praticar**
+
+* **Problema 1**
+
+$f(x) = 3x - 1$ e $g(x) = x^{3} + 2$. Calcule g(f(1)).
+
+* **Problema 2**
+
+$m(x) = 3x - 2** e $n(x) = x + 4$. Encontre m(n(x)).
+
+* **Funções Compostas: uma definição formal**
+
+No exemplo acima, encontramos e calculamos uma função composta.
+
+Em geral, para indicar a função f composta com a função g, podemos escrever fog, que é lido como "f composta com g". Essa composição é definida pela seguinte regra: (fog)(x) = f(g(x)).
+
+O diagrama abaixo mostra a relação entre (fog)(x) e f(g(x)).
+
+![Figura 5](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura05.png)
+
+Agora, vamos ver outro exemplo com essa nova definição em mente.
+
+* **Exemplo**
+
+$g(x) = x = 4$ e $h(x) = x^{2} - 2x$. Encontre (hog)(x) e (hog)(-2).
+
+
+Agora, vamos praticar com alguns problemas
+
+* **Problema 3**
+
+$f(x) = 3x - 5$ e $g(x) = 3 - 2x$. Calcule (gof)(3).
+
+Nos problemas 4 e 5, sejam $f(t) = t - 2$ e $g(t) = t^{2} + 5$. 
+
+* **Problema 4**
+
+Encontre (gof)(t).
+
+* **Problema 5**
+
+Encontre (fog)(t)
+
+* **Desafio**
+
+Os gráficos das equações $y = f(x)$ e $y = g(x)$ são mostradas na malha abaixo:
+
+![Figura 6](https://github.com/ubiratantavares/pre_calculo/blob/main/unidade01/licao01/figura06.png)
+
+Qual das seguintes opçóes melhor aproxima-se ao valor de (fog)(8)?
+
+a) -12
+
+b) -3
+
+c) 0
+
+d) 2
+
 ## 3. Resolução de funções compostas
 
 ## 4. Avalie funções compostas

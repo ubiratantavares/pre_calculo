@@ -25,7 +25,7 @@ a = symbols('a')
 print(V(a))
 
 # avalia a função V em a = 2
-V_value = V(2)
+V_value = V(1.5)
 
 # Exibe o valor da função V avaliado em a = 2 com duas casas decimais
-print(f'V(2) = {V_value:.2f}')
+print(f'V(1.5) = {V_value:.2f}')

@@ -78,6 +78,8 @@ $$
 
 Definindo a função M e avaliando em c = 13.500 na linguagem Python:
 
+* **script03.py**
+
 ```Python
 from sympy import symbols, Function
 
@@ -146,6 +148,8 @@ M(C(a)) = 0,9C(a) - 50 = 0,9\times(7.500a - 1.500) - 50 = 6.750a - 1.350 - 50 = 
 $$
 
 Definindo e avaliando a função composta M(C(a)) em a = 2 usando Python
+
+* **script04.py**
 
 ```Python
 from sympy import symbols, Function, simplify
@@ -226,6 +230,8 @@ Converte dois diretamente em 12.100 reais.
 
 * **Problema 1**: Utilizando as funções apresentadas no exemplo, quanto Caio pode esperar ganhar se ele vender todo o milho produzido em 1,5 acre?
 
+**Resposta:** 8.725 reais
+
 * **Problema 2**: Benjamim é um produtor de batatas. A função:
 
 $$
@@ -244,15 +250,66 @@ Nos dá a quantidade de dinheiro, **M**, em reais, que Benjamim espera consegui
 
 Quanto, em dinheiro, Benjamim pode esperar ganhar se ele vender todas as batatas produzidas em 3 acres?
 
+**Resposta:**  reais
+
 * **Problema 3**: Qual das expressões a seguir dá a quantidade de dinheiro que Benjamim espera ganhar se ele plantar batatas em **a** acres de terra?
+
+**Resposta:**
 
 $$
 M(P(a)) = 0,2\times(25.000a - 1.000) - 200 = 5.000a - 200 - 200 = 5.000a - 400
 $$ 
 
+Definindo as funções P, M e MoP e avaliando em a = 3 usando Python
+
+* **script05.py**
+
+```Python
+from sympy import symbols, Function, simplify
+
+# define a classe para a função P(a)
+class P(Function):
+    @classmethod
+    def eval(cls, a):
+        return 25000 * a - 1000
+
+# define a classe para a função M(p)
+class M(Function):
+    @classmethod
+    def eval(cls, p):
+        return 0.2 * p - 200
+
+# define a classe para a função MoP(a) = M(P(a))
+class MoP(Function):
+    @classmethod
+    def eval(cls, a):
+        return simplify(M(P(a)))  # aplica M sobre P(a) e simplifica
+
+# define a variável simbólica
+a = symbols('a')
+
+# avalia a função P em a = 3
+P_value = P(3)
+
+# avalia a função M em P_value
+M_value = M(P_value)
+
+# avalia a função Mop em a = 3
+MoP_value = MoP(3)
+
+# exibe a função MoP em a
+print(MoP(a))
+
+# exibe o valor da função MoP avaliado em a = 3 com duas casas decimais
+print(f'M(3)= {M_value:.2f}')
+print(f'MoP(3) = {MoP_value:.2f}')
+```
+
 ## 2. Funções compostas
 
-Dadas duas funções, podemos combiná-las de maneira que as saídas de uma função se tornem as entradas da outra. Isso define uma **função composta**. Vamos ver o que isso significa!
+Dadas duas funções, podemos combiná-las de maneira que as saídas de uma função se tornem as entradas da outra. Isso define uma **função composta**. 
+
+Vamos ver o que isso significa!
 
 ## 3. Resolução de funções compostas
 
